@@ -19,7 +19,7 @@ function VehiclePage() {
                 </section>
             </form>
             <section>
-                {/* vehicle inventory to display here */}
+                <VehicleList />
             </section>
         </div>
     )
