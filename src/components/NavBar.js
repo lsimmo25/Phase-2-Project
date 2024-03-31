@@ -7,9 +7,9 @@ function NavBar() {
     return(
         <nav>
                     <Link to="/">Home</Link>
-                    <Link to="vehicles">Vehicles</Link>
-                    <Link to="customers">Customers</Link>
-                    <Link to="employees">Employees</Link>
+                    <Link to="/vehicle-inventory">Vehicles</Link>
+                    <Link to="/customers">Customers</Link>
+                    <Link to="/employees">Employees</Link>
         </nav>
     )
 }
