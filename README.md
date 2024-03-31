@@ -1,2 +1,4 @@
 # Phase-2-Project
-- testing
+Single Page Application
+
+Dealship Management Software

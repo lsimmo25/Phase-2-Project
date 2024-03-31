@@ -1,8 +1,11 @@
 {
-    "test": [
+    "tasks": [
         {
             "id": 1,
-            "name": "test"
+            "description": "create a task tracker application",
+            "due": "mm-dd-yyyy",
+            "priority": "high",
+            "status": "incomplete"
         }
     ]
 }
