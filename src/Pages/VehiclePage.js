@@ -1,23 +1,25 @@
 import React from "react";
 import VehicleList from "../components/VehicleList";
+import VehicleSearch from "../components/VehicleSearch";
 
 function VehiclePage() {
 
     return (
         <div>
-            <h1>Vehicle inventory</h1>
+            <h1>Vehicle Inventory</h1>
             <form className="add-vehicle-form">
                 <section>
                     <input placeholder="Stock Number"></input>
                     <input placeholder="VIN"></input>
-                    <button type="button">Decode</button>
-                </section>
-                <section>
                     <input placeholder="Year"></input>
                     <input placeholder="Make"></input>
                     <input placeholder="Model"></input>
+                    <button type="submit">Add</button>
                 </section>
             </form>
+            <section>
+                <VehicleSearch />
+            </section>
             <section>
                 <VehicleList />
             </section>
