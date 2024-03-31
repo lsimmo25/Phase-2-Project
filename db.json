@@ -2,10 +2,11 @@
     "vehicles": [
         {
             "id": 1,
+            "stock": "P001",
+            "vin": "1N4BL21E28C209519",
             "year": "2008",
             "make": "Nissan",
-            "model": "Altima",
-            "vin": "1N4BL21E28C209519"
+            "model": "Altima"
         }
     ],
     "customers": [
