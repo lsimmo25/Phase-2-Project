@@ -1,10 +1,10 @@
 import React from "react";
 
-function AddTaskPage() {
+function VehiclePage() {
 
     return (
         <></>
     )
 }
 
-export default AddTaskPage
+export default VehiclePage
