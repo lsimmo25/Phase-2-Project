@@ -1,16 +1,24 @@
 import React from "react";
 
-function VehicleCard({ id, stock, vin, year, make, model }) {
+function VehicleCard({ id, stock, vin, year, make, model, setVehicles, vehicles }) {
+
+    const handleDelete = () => {
+        fetch(`http://localhost:4000/vehicles/${id}`, {
+            method: "DELETE"
+        })
+        .then(() => {
+            setVehicles(prevVehicles => prevVehicles.filter(prevVehicle => prevVehicle.id !== id))
+        })
+    }
 
     return (
         <tbody>
             <tr>
-                <td>{stock}</td>
+                <td><button type="button" style={{float: "left"}} onClick={handleDelete}>X</button>{stock}</td>
                 <td>{vin}</td>
                 <td>{year}</td>
                 <td>{make}</td>
                 <td>{model}</td>
-                <td><button type="button">X</button></td>
             </tr>
            
         </tbody>

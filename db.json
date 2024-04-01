@@ -25,12 +25,12 @@
       "model": "F-150"
     },
     {
-      "id": "34e5",
-      "stock": "P004",
-      "vin": "RandomToyotaVin",
-      "year": "2023",
-      "make": "Toyota",
-      "model": "Rav4"
+      "id": "51a9",
+      "stock": "P005",
+      "vin": "WAUCD64B64N058782",
+      "year": "2004",
+      "make": "Audi",
+      "model": "A6"
     }
   ],
   "customers": [
