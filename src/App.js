@@ -11,6 +11,8 @@ import EmployeesPage from './Pages/EmployeesPage';
 function App() {
 
   const [vehicles, setVehicles] = useState([])
+  const [customers, setCustomers] = useState([])
+  const [employees, setEmployees] = useState([])
 
   useEffect(() => {
     fetch(`http://localhost:4000/vehicles`)
@@ -18,12 +20,26 @@ function App() {
     .then(retrievedVehicles => setVehicles(retrievedVehicles))
   }, [])
 
+  useEffect(() => {
+    fetch(`http://localhost:4000/customers`)
+    .then(r => r.json())
+    .then(retrievedCustomers => setCustomers(retrievedCustomers))
+  }, [])
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/employees`)
+    .then(r => r.json())
+    .then(retrievedEmployees => setEmployees(retrievedEmployees))
+  }, [])
+
+
+
   return (
     <Router>
       <div className="App">
         <NavBar />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage vehicles={vehicles} customers={customers} employees={employees}/>} />
             <Route path="/vehicle-inventory" element={<VehiclePage vehicles={vehicles} setVehicles={setVehicles}/>} />
             <Route path="/customers" element={<CustomersPage />} />
             <Route path="/employees" element={<EmployeesPage />} />

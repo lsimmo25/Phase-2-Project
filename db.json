@@ -23,6 +23,14 @@
       "year": "2022",
       "make": "Ford",
       "model": "F-150"
+    },
+    {
+      "id": "34e5",
+      "stock": "P004",
+      "vin": "RandomToyotaVin",
+      "year": "2023",
+      "make": "Toyota",
+      "model": "Rav4"
     }
   ],
   "customers": [

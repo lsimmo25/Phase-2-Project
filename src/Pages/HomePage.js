@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home({ vehicles, customers, employees }) {
 
-
+    const totalVehicles = vehicles.length
+    const totalCustomers = customers.length
+    const totalEmployees = employees.length
 
     return(
         <div style={{textAlign: "center"}}>
@@ -11,13 +13,13 @@ function Home() {
                 <h1>Dealership Statistics</h1>
             </header>
             <section>
-                <h2>Total Vehicles: {/*display total number of vehicles here*/}</h2>
+                <h2>Total Vehicles: <Link to="/vehicle-inventory">{totalVehicles}</Link></h2>
             </section>
             <section>
-                <h2>Active Customers: {/*display total number of active customers here*/}</h2>
+                <h2>Active Customers: <Link to="/customers">{totalCustomers}</Link></h2>
             </section>
             <section>
-                <h2>Active Employees: {/*display total number of active Employees here*/}</h2>
+                <h2>Active Employees: <Link to="/employees">{totalEmployees}</Link></h2>
             </section>
         </div>
     )
