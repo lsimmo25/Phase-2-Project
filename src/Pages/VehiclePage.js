@@ -1,27 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import VehicleList from "../components/VehicleList";
 import VehicleSearch from "../components/VehicleSearch";
+import AddVehicleForm from "../components/AddVehicleForm";
 
-function VehiclePage() {
+function VehiclePage({ vehicles, setVehicles }) {
 
     return (
         <div>
             <h1>Vehicle Inventory</h1>
-            <form className="add-vehicle-form">
-                <section>
-                    <input placeholder="Stock Number"></input>
-                    <input placeholder="VIN"></input>
-                    <input placeholder="Year"></input>
-                    <input placeholder="Make"></input>
-                    <input placeholder="Model"></input>
-                    <button type="submit">Add</button>
-                </section>
-            </form>
+                <AddVehicleForm setVehicles={setVehicles}/>
             <section>
                 <VehicleSearch />
             </section>
             <section>
-                <VehicleList />
+                <VehicleList vehicles={vehicles} setVehicles={setVehicles}/>
             </section>
         </div>
     )

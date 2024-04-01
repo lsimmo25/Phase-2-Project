@@ -1,6 +1,7 @@
 import React from "react";
+import VehicleCard from "./VehicleCard.js"
 
-function VehicleList() {
+function VehicleList({ vehicles, setVehicles }) {
 
     return (
         <table>
@@ -13,9 +14,9 @@ function VehicleList() {
                     <th>Model</th>
                 </tr>
             </thead>
-            <tbody>
-                {/* vehicle cards go here */}
-            </tbody>
+            {vehicles.map(vehicle => (
+                    <VehicleCard key={vehicle.id} {...vehicle}/>
+                ))}
         </table>
     )
 }

@@ -16,6 +16,9 @@ function Home() {
             <section>
                 <h2>Active Customers: {/*display total number of active customers here*/}</h2>
             </section>
+            <section>
+                <h2>Active Employees: {/*display total number of active Employees here*/}</h2>
+            </section>
         </div>
     )
 }

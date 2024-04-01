@@ -1,9 +1,20 @@
 import React from "react";
 
-function VehicleCard() {
+function VehicleCard({ id, stock, vin, year, make, model }) {
 
     return (
-        <td></td>
+        <tbody>
+            <tr>
+                <td>{stock}</td>
+                <td>{vin}</td>
+                <td>{year}</td>
+                <td>{make}</td>
+                <td>{model}</td>
+                <td><button type="button">X</button></td>
+            </tr>
+           
+        </tbody>
+
     )
 }
 
