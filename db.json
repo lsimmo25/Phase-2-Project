@@ -1,30 +1,45 @@
 {
-    "vehicles": [
-        {
-            "id": 1,
-            "stock": "P001",
-            "vin": "1N4BL21E28C209519",
-            "year": "2008",
-            "make": "Nissan",
-            "model": "Altima"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "first": "Michael",
-            "last": "Scott",
-            "address": "1725 Slough Avenue, Scranton, PA"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "first": "Ron",
-            "last": "Swanson",
-            "hire-date": "01-22-2022",
-            "status": "active"
-        }
-    ]
-
+  "vehicles": [
+    {
+      "id": "1",
+      "stock": "P001",
+      "vin": "1N4BL21E28C209519",
+      "year": "2008",
+      "make": "Nissan",
+      "model": "Altima"
+    },
+    {
+      "id": "7772",
+      "stock": "P002",
+      "vin": "RandomHondaVIN",
+      "year": "2017",
+      "make": "Honda",
+      "model": "Civic"
+    },
+    {
+      "id": "a182",
+      "stock": "P003",
+      "vin": "RandomFordVin",
+      "year": "2022",
+      "make": "Ford",
+      "model": "F-150"
+    }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "first": "Michael",
+      "last": "Scott",
+      "address": "1725 Slough Avenue, Scranton, PA"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "first": "Ron",
+      "last": "Swanson",
+      "hire-date": "01-22-2022",
+      "status": "active"
+    }
+  ]
 }

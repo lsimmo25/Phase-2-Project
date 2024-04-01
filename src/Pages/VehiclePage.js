@@ -8,7 +8,7 @@ function VehiclePage({ vehicles, setVehicles }) {
     return (
         <div>
             <h1>Vehicle Inventory</h1>
-                <AddVehicleForm setVehicles={setVehicles}/>
+                <AddVehicleForm setVehicles={setVehicles} vehicles={vehicles}/>
             <section>
                 <VehicleSearch />
             </section>

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 
-function AddVehicleForm({ setVehicles }) {
+function AddVehicleForm({ setVehicles, vehicles }) {
 
-    const [newVehicle, setNewVehicle] = useState({
+    const defaultForm = {
         stock: "",
         vin: "",
         year: "",
         make: "",
         model: ""
-    })
+    }
+
+    const [newVehicle, setNewVehicle] = useState(defaultForm)
 
     const handleChange = (e) => {
         setNewVehicle({
@@ -19,6 +21,20 @@ function AddVehicleForm({ setVehicles }) {
 
     const handleAddVehicle = () => {
         console.log("vehicle added", newVehicle)
+
+        fetch(`http://localhost:4000/vehicles`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newVehicle)
+        })
+        .then(r => r.json())
+        .then(addedVehicle => {
+            setVehicles([...vehicles, addedVehicle])
+            setNewVehicle(defaultForm)
+        })
+        .catch(error => console.log(error))
     }
 
     return (
