@@ -41,7 +41,6 @@ function AddVehicleForm({ setVehicles, vehicles }) {
         fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/${newVehicle.vin}*BA?format=json&modelyear=2011`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setNewVehicle({
                     ...newVehicle,
                     year: data.Results[0].ModelYear,
