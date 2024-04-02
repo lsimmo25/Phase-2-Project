@@ -1,21 +1,21 @@
 # Phase-2-Project
 
-#Dealship Management Software (DMS)
+## Dealship Management Software (DMS)
 
-#Features
+### Features
 
-#Home
+### Home
 
 - The home screen displays dealership statistics with total counts of vehicles, customers and employees
 
-#Vehicle Page
+### Vehicle Page
 
 - View in stock vehicles
 - Add new vehicles to inventory
 - Decode VINs to auto populate year, make, model
 - Search for vehicles by various criteria 
 
-#Customer Page
+### Customer Page
 
 - View customers
 - Add new customers
@@ -23,7 +23,7 @@
 - Delete customers
 - Set customers as inactive
 
-#Employee Page
+### Employee Page
 
 - View employees
 - Add new employees
@@ -32,15 +32,15 @@
 - Set employees inactive or active
 - Sort employees by status active or inactive
 
-#Authors
+### Authors
 
 Lyle Simmons
 
-#Acknowledgements
+### Acknowledgements
 
 React logo - react-logo https://freebiesupply.com/logos/react-logo-2/
 
-#License
+### License
 
 MIT License
 
