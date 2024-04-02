@@ -76,7 +76,7 @@
       "first": "Ron",
       "last": "Swanson",
       "hireDate": "01-22-2022",
-      "active": false
+      "active": true
     },
     {
       "id": "b2fc",
