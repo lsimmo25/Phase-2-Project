@@ -51,9 +51,10 @@ function App() {
   )
 
   const searchEmployeeResult = employees.filter(employee =>
-    employee.first.toLowerCase().includes(searchEmployees.toLowerCase()) ||
+    (showActive ? employee.active : true) &&
+    (employee.first.toLowerCase().includes(searchEmployees.toLowerCase()) ||
     employee.last.toLowerCase().includes(searchEmployees.toLowerCase()) ||
-    employee.hireDate.toLowerCase().includes(searchEmployees.toLowerCase())
+    employee.hireDate.toLowerCase().includes(searchEmployees.toLowerCase()))
   )
 
   return (
@@ -93,6 +94,8 @@ function App() {
               setEmployees={setEmployees}
               searchEmployees={searchEmployees}
               setSearchEmployees={setSearchEmployees}
+              setShowActive={setShowActive}
+              showActive={showActive}
             />
           }
           />

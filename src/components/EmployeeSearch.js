@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-function EmployeeSearch({ searchEmployees, setSearchEmployees }) {
+function EmployeeSearch({ searchEmployees, setSearchEmployees, setShowActive, showActive }) {
+
+    const handleShowActiveClick = () => {
+        setShowActive(prevState => !prevState)
+    }
 
     return(
         <>
@@ -12,7 +16,7 @@ function EmployeeSearch({ searchEmployees, setSearchEmployees }) {
                 style={{marginTop: "25px", width: "50%", height: "30px"}}
             >
             </input>
-            <button type="button">Show Active</button>
+            <button type="button" onClick={handleShowActiveClick}>{showActive ? "Show All" : "Show Active"}</button>
         </>
     )
 }

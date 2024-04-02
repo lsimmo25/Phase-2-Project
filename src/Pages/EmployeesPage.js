@@ -3,7 +3,7 @@ import EmployeeList from "../components/EmployeeList";
 import EmployeeSearch from "../components/EmployeeSearch";
 import AddEmployeeForm from "../components/AddEmployeeForm";
 
-function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmployees}) {
+function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmployees, setShowActive, showActive}) {
 
 
     return (
@@ -11,10 +11,16 @@ function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmpl
             <h1>Employees</h1>
             <AddEmployeeForm setEmployees={setEmployees} employees={employees} />
             <section>
-                <EmployeeSearch employees={employees} setSearchEmployees={setSearchEmployees} searchEmployees={searchEmployees} />
+                <EmployeeSearch 
+                    employees={employees} 
+                    setSearchEmployees={setSearchEmployees} 
+                    earchEmployees={searchEmployees} 
+                    setShowActive={setShowActive}
+                    showActive={showActive}
+                />
             </section>
             <section>
-                <EmployeeList employees={employees} setEmployees={setEmployees} />
+                <EmployeeList employees={employees} setEmployees={setEmployees}/>
             </section>
         </div>
     )
