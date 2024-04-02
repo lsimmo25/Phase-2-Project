@@ -19,7 +19,7 @@ function CustomerCard({ id, first, last, address, setCustomers, active }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ active: !active})
+            body: JSON.stringify({ status: !active})
         })
         .then(r => r.json())
         .then(() => {
