@@ -5,9 +5,6 @@ import AddEmployeeForm from "../components/AddEmployeeForm";
 
 function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmployees}) {
 
-    const [showActive, setShowActive] = useState(false)
-
-    const filteredEmployees = showActive ? employees.filter(employee => employee.active) : employees
 
     return (
         <div>
@@ -15,10 +12,9 @@ function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmpl
             <AddEmployeeForm setEmployees={setEmployees} employees={employees} />
             <section>
                 <EmployeeSearch employees={employees} setSearchEmployees={setSearchEmployees} searchEmployees={searchEmployees} />
-                <button type="button" onClick={() => setShowActive(!showActive)}>{showActive ? "Show All" : "Show Active"}</button>
             </section>
             <section>
-                <EmployeeList employees={filteredEmployees} setEmployees={setEmployees} />
+                <EmployeeList employees={employees} setEmployees={setEmployees} />
             </section>
         </div>
     )

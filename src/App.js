@@ -16,6 +16,7 @@ function App() {
   const [customers, setCustomers] = useState([])
   const [employees, setEmployees] = useState([])
   const [searchEmployees, setSearchEmployees] = useState("")
+  const [showActive, setShowActive] = useState(true)
 
   useEffect(() => {
     fetch(`http://localhost:4000/vehicles`)
