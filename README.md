@@ -33,6 +33,7 @@
 - Sort employees by status active or inactive
 
 #Authors
+
 Lyle Simmons
 
 #Acknowledgements
