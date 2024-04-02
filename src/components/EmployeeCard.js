@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EmployeeCard({ id, setEmployees, first, last, hireDate, status }) {
+function EmployeeCard({ id, setEmployees, first, last, hireDate, active }) {
 
     const [isActive, setIsActive] = useState(true)
 
@@ -35,7 +35,7 @@ function EmployeeCard({ id, setEmployees, first, last, hireDate, status }) {
                 <td><button type="button" style={{float: "left"}} onClick={handleDelete}>X</button>{first}</td>
                 <td>{last}</td>
                 <td>{hireDate}</td>
-                <td><button type="button" onClick={handleStatus}>{isActive ? "Active" : "Inactive"}</button></td>
+                <td><button type="button" onClick={handleStatus}>{active ? "Active" : "Inactive"}</button></td>
             </tr>   
         </tbody>
 
