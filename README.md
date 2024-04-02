@@ -1,6 +1,4 @@
-# Phase-2-Project
-
-## Dealship Management Software (DMS)
+# Dealership Management Software (DMS)
 
 ### Features
 
