@@ -15,10 +15,10 @@ function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmpl
             <AddEmployeeForm setEmployees={setEmployees} employees={employees} />
             <section>
                 <EmployeeSearch employees={employees} setSearchEmployees={setSearchEmployees} searchEmployees={searchEmployees} />
-                <button type="button" onClick={() => setShowActive(!showActive)}></button>
+                <button type="button" onClick={() => setShowActive(!showActive)}>{showActive ? "Show All" : "Show Active"}</button>
             </section>
             <section>
-                <EmployeeList employees={employees} setEmployees={setEmployees} />
+                <EmployeeList employees={filteredEmployees} setEmployees={setEmployees} />
             </section>
         </div>
     )

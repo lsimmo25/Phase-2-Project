@@ -76,22 +76,21 @@
       "first": "Ron",
       "last": "Swanson",
       "hireDate": "01-22-2022",
-      "status": true,
-      "active": true
+      "active": false
     },
     {
       "id": "b2fc",
       "first": "Leslie",
       "last": "Knope",
       "hireDate": "02-22-2024",
-      "status": true
+      "active": true
     },
     {
       "id": "c777",
       "first": "April",
       "last": "Ludgate",
       "hireDate": "4-14-2023",
-      "status": true
+      "active": true
     }
   ]
 }

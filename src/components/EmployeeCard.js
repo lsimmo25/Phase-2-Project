@@ -19,7 +19,7 @@ function EmployeeCard({ id, setEmployees, first, last, hireDate, status }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ status: !isActive})
+            body: JSON.stringify({ active: !isActive})
         })
         .then(r => r.json())
         .then(() => {

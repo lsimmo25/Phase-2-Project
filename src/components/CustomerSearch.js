@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 function CustomerSearch({ searchCustomers, setSearchCustomers }) {
 
+    
+
 
     return(
         <input 
