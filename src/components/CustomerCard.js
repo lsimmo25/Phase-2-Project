@@ -19,13 +19,18 @@ function CustomerCard({ id, first, last, address, setCustomers, status }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ status: !status})
+            body: JSON.stringify({ status: !isActive})
         })
         .then(r => r.json())
-        .then(() => {
-            setIsActive(!isActive)
-        })
-            
+        .then(updatedCustomer => {
+            setIsActive(updatedCustomer.active)
+            setCustomers(prevCustomers => prevCustomers.map(customer => {
+                if (customer.id === updatedCustomer.id) {
+                    return {...customer, status: updatedCustomer.status}
+                }
+                return customer
+            }))
+        })   
         .catch(error => console.log(error))
     }
 
