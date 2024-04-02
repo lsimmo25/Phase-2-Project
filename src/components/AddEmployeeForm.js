@@ -19,7 +19,6 @@ function AddEmployeeForm({ setEmployees, employees }) {
     }
 
     const handleAddEmployee = () => {
-        console.log("employee added", newEmployee)
 
         fetch(`http://localhost:4000/employees`, {
             method: "POST",
