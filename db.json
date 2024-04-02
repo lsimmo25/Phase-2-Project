@@ -67,7 +67,8 @@
       "id": "968a",
       "first": "Dwight",
       "last": "Schrute",
-      "address": "5 Rockledge Road Kings Mountain, NC"
+      "address": "5 Rockledge Road Kings Mountain, NC",
+      "status": true
     }
   ],
   "employees": [
