@@ -38,7 +38,15 @@
       "id": "1",
       "first": "Michael",
       "last": "Scott",
-      "address": "1725 Slough Avenue, Scranton, PA"
+      "address": "1725 Slough Avenue, Scranton, PA",
+      "active": true
+    },
+    {
+      "id": "89db",
+      "first": "Pam",
+      "last": "Beasly",
+      "address": "1725 Slough Avenue, Scranton, PA",
+      "active": false
     }
   ],
   "employees": [

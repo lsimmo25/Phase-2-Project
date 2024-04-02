@@ -12,6 +12,7 @@ function App() {
 
   const [vehicles, setVehicles] = useState([])
   const [searchVehicles, setSearchVehicles] = useState("")
+  const [searchCustomers, setSearchCustomers] = useState("")
   const [customers, setCustomers] = useState([])
   const [employees, setEmployees] = useState([])
 
@@ -41,6 +42,12 @@ function App() {
       vehicle.model.toLowerCase().includes(searchVehicles.toLowerCase())
     )
 
+  const searchCustomerResult = customers.filter(customer => 
+    customer.first.toLowerCase().includes(searchCustomers.toLowerCase()) ||
+    customer.last.toLowerCase().includes(searchCustomers.toLowerCase()) ||
+    customer.address.toLowerCase().includes(searchCustomers.toLowerCase())
+  )
+
   return (
     <Router>
       <div className="App">
@@ -56,7 +63,16 @@ function App() {
               />
             }
           />
-          <Route path="/customers" element={<CustomersPage />} />
+          <Route path="/customers" element={
+            <CustomersPage 
+              customers={searchCustomerResult}
+              setCustomers={setCustomers}
+              searchCustomers={searchCustomers}
+              setSearchCustomers={setSearchCustomers}
+              
+            />
+          } 
+          />
           <Route path="/employees" element={<EmployeesPage />} />
         </Routes>
       </div>
