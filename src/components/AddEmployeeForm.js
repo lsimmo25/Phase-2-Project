@@ -41,7 +41,7 @@ function AddEmployeeForm({ setEmployees, employees }) {
             <section>
                 <input placeholder="First Name" name="first" value={newEmployee.first} onChange={handleChange}></input>
                 <input placeholder="Last Name" name="last" value={newEmployee.last} onChange={handleChange}></input>
-                <input placeholder="Address" name="address" value={newEmployee.address} onChange={handleChange}></input>
+                <input placeholder="Hire Date" name="hireDate" value={newEmployee.hireDate} onChange={handleChange}></input>
                 <button type="button" onClick={handleAddEmployee}>Add</button>
             </section>
         </form>

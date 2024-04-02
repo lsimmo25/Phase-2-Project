@@ -31,6 +31,15 @@
       "year": "2004",
       "make": "Audi",
       "model": "A6"
+    },
+    {
+      "id": "02c7",
+      "stock": "P006",
+      "vin": "1FBNE31LX6HA80830",
+      "year": "2006",
+      "make": "FORD",
+      "model": "E-350",
+      "Model": "camry solara"
     }
   ],
   "customers": [
@@ -39,7 +48,7 @@
       "first": "Michael",
       "last": "Scott",
       "address": "1725 Slough Avenue, Scranton, PA",
-      "status": false
+      "status": true
     },
     {
       "id": "89db",
@@ -47,6 +56,18 @@
       "last": "Beasly",
       "address": "1725 Slough Avenue, Scranton, PA",
       "status": true
+    },
+    {
+      "id": "e865",
+      "first": "Jim",
+      "last": "Halpert",
+      "address": "21 W. Jackson Street Morrisville, PA"
+    },
+    {
+      "id": "968a",
+      "first": "Dwight",
+      "last": "Schrute",
+      "address": "5 Rockledge Road Kings Mountain, NC"
     }
   ],
   "employees": [
@@ -57,6 +78,20 @@
       "hireDate": "01-22-2022",
       "status": true,
       "active": true
+    },
+    {
+      "id": "b2fc",
+      "first": "Leslie",
+      "last": "Knope",
+      "hireDate": "02-22-2024",
+      "status": true
+    },
+    {
+      "id": "c777",
+      "first": "April",
+      "last": "Ludgate",
+      "hireDate": "4-14-2023",
+      "status": true
     }
   ]
 }
