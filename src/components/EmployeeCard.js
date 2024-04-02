@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EmployeeCard({ id, setEmployees, first, last, hireDate, active }) {
+function EmployeeCard({ id, setEmployees, first, last, hireDate, active, employees }) {
 
     const [isActive, setIsActive] = useState(true)
 
@@ -22,10 +22,15 @@ function EmployeeCard({ id, setEmployees, first, last, hireDate, active }) {
             body: JSON.stringify({ active: !isActive})
         })
         .then(r => r.json())
-        .then(() => {
-            setIsActive(!isActive)
-        })
-            
+        .then(updatedEmployee => {
+            setIsActive(updatedEmployee.active)
+            setEmployees(prevEmployees => prevEmployees.map(employee => {
+                if (employee.id === updatedEmployee.id) {
+                    return {...employee, active: updatedEmployee.active}
+                }
+                return employee
+            }))
+        })   
         .catch(error => console.log(error))
     }
 

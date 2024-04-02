@@ -14,7 +14,7 @@ function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmpl
                 <EmployeeSearch 
                     employees={employees} 
                     setSearchEmployees={setSearchEmployees} 
-                    earchEmployees={searchEmployees} 
+                    SearchEmployees={searchEmployees} 
                     setShowActive={setShowActive}
                     showActive={showActive}
                 />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CustomerCard({ id, first, last, address, setCustomers, active }) {
+function CustomerCard({ id, first, last, address, setCustomers, status }) {
 
     const [isActive, setIsActive] = useState(true)
 
@@ -19,7 +19,7 @@ function CustomerCard({ id, first, last, address, setCustomers, active }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ status: !active})
+            body: JSON.stringify({ status: !status})
         })
         .then(r => r.json())
         .then(() => {
@@ -35,7 +35,7 @@ function CustomerCard({ id, first, last, address, setCustomers, active }) {
                 <td><button type="button" style={{float: "left"}} onClick={handleDelete}>X</button>{first}</td>
                 <td>{last}</td>
                 <td>{address}</td>
-                <td><button type="button" onClick={handleStatus}>{isActive ? "Active" : "Inactive"}</button></td>
+                <td><button type="button" onClick={handleStatus}>{status ? "Active" : "Inactive"}</button></td>
             </tr>   
         </tbody>
 
