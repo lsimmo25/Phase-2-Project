@@ -15,6 +15,7 @@ function App() {
   const [searchCustomers, setSearchCustomers] = useState("")
   const [customers, setCustomers] = useState([])
   const [employees, setEmployees] = useState([])
+  const [searchEmployees, setSearchEmployees] = useState("")
 
   useEffect(() => {
     fetch(`http://localhost:4000/vehicles`)
@@ -34,18 +35,24 @@ function App() {
       .then(retrievedEmployees => setEmployees(retrievedEmployees))
   }, [])
 
-  const searchVehicleResult = vehicles.filter(vehicle => 
-      vehicle.stock.toLowerCase().includes(searchVehicles.toLowerCase()) ||
-      vehicle.vin.toLowerCase().includes(searchVehicles.toLowerCase()) ||
-      vehicle.year.toLowerCase().includes(searchVehicles.toLowerCase()) ||
-      vehicle.make.toLowerCase().includes(searchVehicles.toLowerCase()) ||
-      vehicle.model.toLowerCase().includes(searchVehicles.toLowerCase())
-    )
+  const searchVehicleResult = vehicles.filter(vehicle =>
+    vehicle.stock.toLowerCase().includes(searchVehicles.toLowerCase()) ||
+    vehicle.vin.toLowerCase().includes(searchVehicles.toLowerCase()) ||
+    vehicle.year.toLowerCase().includes(searchVehicles.toLowerCase()) ||
+    vehicle.make.toLowerCase().includes(searchVehicles.toLowerCase()) ||
+    vehicle.model.toLowerCase().includes(searchVehicles.toLowerCase())
+  )
 
-  const searchCustomerResult = customers.filter(customer => 
+  const searchCustomerResult = customers.filter(customer =>
     customer.first.toLowerCase().includes(searchCustomers.toLowerCase()) ||
     customer.last.toLowerCase().includes(searchCustomers.toLowerCase()) ||
     customer.address.toLowerCase().includes(searchCustomers.toLowerCase())
+  )
+
+  const searchEmployeeResult = employees.filter(employee =>
+    employee.first.toLowerCase().includes(searchEmployees.toLowerCase()) ||
+    employee.last.toLowerCase().includes(searchEmployees.toLowerCase()) ||
+    employee.hireDate.toLowerCase().includes(searchEmployees.toLowerCase())
   )
 
   return (
@@ -53,27 +60,41 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage vehicles={vehicles} customers={customers} employees={employees} />} />
+          <Route path="/" element={
+            <HomePage
+              vehicles={vehicles}
+              customers={customers}
+              employees={employees}
+            />
+          }
+          />
           <Route path="/vehicle-inventory" element={
-              <VehiclePage
-                vehicles={searchVehicleResult}
-                setVehicles={setVehicles}
-                searchVehicles={searchVehicles}
-                setSearchVehicles={setSearchVehicles}
-              />
-            }
+            <VehiclePage
+              vehicles={searchVehicleResult}
+              setVehicles={setVehicles}
+              searchVehicles={searchVehicles}
+              setSearchVehicles={setSearchVehicles}
+            />
+          }
           />
           <Route path="/customers" element={
-            <CustomersPage 
+            <CustomersPage
               customers={searchCustomerResult}
               setCustomers={setCustomers}
               searchCustomers={searchCustomers}
               setSearchCustomers={setSearchCustomers}
-              
             />
-          } 
+          }
           />
-          <Route path="/employees" element={<EmployeesPage />} />
+          <Route path="/employees" element={
+            <EmployeesPage
+              employees={searchEmployeeResult}
+              setEmployees={setEmployees}
+              searchEmployees={searchEmployees}
+              setSearchEmployees={setSearchEmployees}
+            />
+          }
+          />
         </Routes>
       </div>
     </Router>

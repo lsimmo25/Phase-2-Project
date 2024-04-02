@@ -3,7 +3,7 @@ import CustomerList from "../components/CustomerList";
 import CustomerSearch from "../components/CustomerSearch";
 import AddCustomerForm from "../components/AddCustomerForm";
 
-function CustomerPage({ customers, setCustomers, setSearchCustomers, searchCustomers }) {
+function CustomerPage({ customers, setCustomers, searchCustomers, setSearchCustomers }) {
 
     return (
         <div>

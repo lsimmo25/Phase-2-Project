@@ -8,7 +8,7 @@ function Home({ vehicles, customers, employees }) {
     const totalEmployees = employees.length
 
     return(
-        <div style={{textAlign: "center"}}>
+        <div style={{textAlign: "center"}} className="container">
             <header>
                 <h1>Dealership Statistics</h1>
             </header>
@@ -16,10 +16,10 @@ function Home({ vehicles, customers, employees }) {
                 <h2>Total Vehicles: <Link to="/vehicle-inventory">{totalVehicles}</Link></h2>
             </section>
             <section>
-                <h2>Active Customers: <Link to="/customers">{totalCustomers}</Link></h2>
+                <h2>Total Customers: <Link to="/customers">{totalCustomers}</Link></h2>
             </section>
             <section>
-                <h2>Active Employees: <Link to="/employees">{totalEmployees}</Link></h2>
+                <h2>Total Employees: <Link to="/employees">{totalEmployees}</Link></h2>
             </section>
         </div>
     )

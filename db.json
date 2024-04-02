@@ -54,8 +54,9 @@
       "id": "1",
       "first": "Ron",
       "last": "Swanson",
-      "hire-date": "01-22-2022",
-      "status": "active"
+      "hireDate": "01-22-2022",
+      "status": "active",
+      "active": true
     }
   ]
 }
