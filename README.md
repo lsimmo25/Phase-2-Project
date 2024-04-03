@@ -30,6 +30,13 @@
 - Set employees inactive or active
 - Sort employees by status active or inactive
 
+### Getting Started
+
+1. Clone this repository to your local machine.
+2. Install dependencies by running `npm install`.
+3. Start the server with `npm start`.
+4. Start the database with `npm run server`.
+
 ### Authors
 
 Lyle Simmons

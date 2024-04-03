@@ -70,6 +70,13 @@
       "last": "Schrute",
       "address": "5 Rockledge Road Kings Mountain, NC",
       "status": true
+    },
+    {
+      "id": "0cbb",
+      "first": "Kevin",
+      "last": "Malone",
+      "address": "21 Smith Road Passaic, NJ",
+      "status": true
     }
   ],
   "employees": [
@@ -93,6 +100,14 @@
       "last": "Ludgate",
       "hireDate": "4-14-2023",
       "active": true
+    },
+    {
+      "id": "de23",
+      "first": "Andy",
+      "last": "Dwyer",
+      "hireDate": "6-12-2024",
+      "status": "",
+      "active": false
     }
   ]
 }
