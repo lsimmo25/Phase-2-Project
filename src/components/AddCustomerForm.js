@@ -17,8 +17,9 @@ function AddCustomerForm({ setCustomers, customers }) {
         })
     }
 
-    const handleAddCustomer = () => {
+    const handleAddCustomer = (e) => {
         console.log("customer added", newCustomer)
+        e.preventDefault()
 
         fetch(`http://localhost:4000/customers`, {
             method: "POST",
@@ -36,12 +37,12 @@ function AddCustomerForm({ setCustomers, customers }) {
     }
 
     return (
-        <form className="add-customer-form">
+        <form onSubmit={handleAddCustomer}>
             <section>
                 <input placeholder="First Name" name="first" value={newCustomer.first} onChange={handleChange}></input>
                 <input placeholder="Last Name" name="last" value={newCustomer.last} onChange={handleChange}></input>
                 <input placeholder="Address" name="address" value={newCustomer.address} onChange={handleChange}></input>
-                <button type="button" onClick={handleAddCustomer}>Add</button>
+                <button type="submit">Add</button>
             </section>
         </form>
     )

@@ -18,7 +18,8 @@ function AddEmployeeForm({ setEmployees, employees }) {
         })
     }
 
-    const handleAddEmployee = () => {
+    const handleAddEmployee = (e) => {
+        e.preventDefault()
 
         fetch(`http://localhost:4000/employees`, {
             method: "POST",
@@ -36,13 +37,11 @@ function AddEmployeeForm({ setEmployees, employees }) {
     }
 
     return (
-        <form className="add-employee-form">
-            <section>
+        <form onSubmit={handleAddEmployee}>
                 <input placeholder="First Name" name="first" value={newEmployee.first} onChange={handleChange}></input>
                 <input placeholder="Last Name" name="last" value={newEmployee.last} onChange={handleChange}></input>
                 <input placeholder="Hire Date" name="hireDate" value={newEmployee.hireDate} onChange={handleChange}></input>
-                <button type="button" onClick={handleAddEmployee}>Add</button>
-            </section>
+                <button type="submit">Add</button>
         </form>
     )
 }

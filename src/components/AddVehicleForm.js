@@ -18,8 +18,8 @@ function AddVehicleForm({ setVehicles, vehicles }) {
             [e.target.name]: e.target.value
         })
     }
-
-    const handleAddVehicle = () => {
+    console.log("test")
+    const handleAddVehicle = (e) => {
         console.log("vehicle added", newVehicle)
 
         fetch(`http://localhost:4000/vehicles`, {
@@ -36,7 +36,7 @@ function AddVehicleForm({ setVehicles, vehicles }) {
             })
             .catch(error => console.log(error))
     }
-
+    console.log(vehicles)
     const decodeVin = () => {
         fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/${newVehicle.vin}*BA?format=json&modelyear=2011`)
             .then(res => res.json())
@@ -53,16 +53,14 @@ function AddVehicleForm({ setVehicles, vehicles }) {
 
 
     return (
-        <form className="add-vehicle-form">
-            <section>
+        <form className="add-vehicle-form" onSubmit={handleAddVehicle}>
                 <input placeholder="Stock Number" name="stock" value={newVehicle.stock} onChange={handleChange}></input>
                 <input placeholder="VIN" name="vin" value={newVehicle.vin} onChange={handleChange}></input>
                 <button type="button" style={{ marginRight: "10px" }} onClick={decodeVin}>Decode</button>
                 <input placeholder="Year" name="year" value={newVehicle.year} onChange={handleChange}></input>
                 <input placeholder="Make" name="make" value={newVehicle.make} onChange={handleChange}></input>
                 <input placeholder="Model" name="model" value={newVehicle.model} onChange={handleChange}></input>
-                <button type="button" onClick={handleAddVehicle}>Add</button>
-            </section>
+                <button type="submit">Add</button>
         </form>
     )
 }

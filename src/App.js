@@ -6,7 +6,7 @@ import HomePage from './Pages/HomePage';
 import VehiclePage from './Pages/VehiclePage';
 import CustomersPage from './Pages/CustomersPage';
 import EmployeesPage from './Pages/EmployeesPage';
-
+import Form from './components/Form';
 
 function App() {
 

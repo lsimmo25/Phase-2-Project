@@ -40,6 +40,14 @@
       "make": "FORD",
       "model": "E-350",
       "Model": "camry solara"
+    },
+    {
+      "id": "e4d7",
+      "stock": "P007",
+      "vin": "1FBNE31LX6HA80830",
+      "year": "2006",
+      "make": "FORD",
+      "model": "E-350"
     }
   ],
   "customers": [
@@ -107,7 +115,21 @@
       "last": "Dwyer",
       "hireDate": "6-12-2024",
       "status": "",
-      "active": false
+      "active": true
+    },
+    {
+      "id": "283b",
+      "first": "Test",
+      "last": "test",
+      "hireDate": "test",
+      "status": ""
+    },
+    {
+      "id": "e4bf",
+      "first": "test",
+      "last": "test",
+      "hireDate": "test",
+      "status": ""
     }
   ]
 }
