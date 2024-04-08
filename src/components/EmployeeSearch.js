@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function EmployeeSearch({ searchEmployees, setSearchEmployees, setShowActive, showActive }) {
 

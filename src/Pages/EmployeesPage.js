@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import EmployeeList from "../components/EmployeeList";
 import EmployeeSearch from "../components/EmployeeSearch";
 import AddEmployeeForm from "../components/AddEmployeeForm";
@@ -12,7 +12,6 @@ function EmployeesPage({ employees, setEmployees, searchEmployees, setSearchEmpl
             <AddEmployeeForm setEmployees={setEmployees} employees={employees} />
             <section>
                 <EmployeeSearch 
-                    employees={employees} 
                     setSearchEmployees={setSearchEmployees} 
                     SearchEmployees={searchEmployees} 
                     setShowActive={setShowActive}

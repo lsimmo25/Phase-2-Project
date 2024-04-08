@@ -18,7 +18,7 @@ function AddCustomerForm({ setCustomers, customers }) {
     }
 
     const handleAddCustomer = (e) => {
-        console.log("customer added", newCustomer)
+
         e.preventDefault()
 
         fetch(`http://localhost:4000/customers`, {

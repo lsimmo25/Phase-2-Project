@@ -76,7 +76,7 @@
       "first": "Kevin",
       "last": "Malone",
       "address": "21 Smith Road Passaic, NJ",
-      "status": false
+      "status": true
     }
   ],
   "employees": [
@@ -106,7 +106,6 @@
       "first": "Andy",
       "last": "Dwyer",
       "hireDate": "6-12-2024",
-      "status": "",
       "active": true
     }
   ]
