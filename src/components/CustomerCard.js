@@ -23,7 +23,7 @@ function CustomerCard({ id, first, last, address, setCustomers, status }) {
         })
         .then(r => r.json())
         .then(updatedCustomer => {
-            setIsActive(updatedCustomer.active)
+            setIsActive(updatedCustomer.status)
             setCustomers(prevCustomers => prevCustomers.map(customer => {
                 if (customer.id === updatedCustomer.id) {
                     return {...customer, status: updatedCustomer.status}
