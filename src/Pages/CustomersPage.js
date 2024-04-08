@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomerList from "../components/CustomerList";
 import CustomerSearch from "../components/CustomerSearch";
 import AddCustomerForm from "../components/AddCustomerForm";
