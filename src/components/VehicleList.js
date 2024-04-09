@@ -15,7 +15,7 @@ function VehicleList({ vehicles, setVehicles }) {
                 </tr>
             </thead>
             {vehicles.map(vehicle => (
-                    <VehicleCard key={vehicle.id} {...vehicle} setVehicles={setVehicles} vehicles={vehicles}/>
+                    <VehicleCard key={vehicle.id} {...vehicle} setVehicles={setVehicles}/>
                 ))}
         </table>
     )

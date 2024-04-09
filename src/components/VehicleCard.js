@@ -1,6 +1,6 @@
 import React from "react";
 
-function VehicleCard({ id, stock, vin, year, make, model, setVehicles, vehicles }) {
+function VehicleCard({ id, stock, vin, year, make, model, setVehicles }) {
 
     const handleDelete = () => {
         fetch(`http://localhost:4000/vehicles/${id}`, {
