@@ -14,7 +14,7 @@ function EmployeeList({ employees, setEmployees }) {
                 </tr>
             </thead>
             {employees.map(employee => (
-                    <EmployeeCard key={employee.id} {...employee} setEmployees={setEmployees} employees={employees}/>
+                    <EmployeeCard key={employee.id} {...employee} setEmployees={setEmployees}/>
                 ))}
         </table>
     )

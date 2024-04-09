@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EmployeeCard({ id, setEmployees, first, last, hireDate, active, employees }) {
+function EmployeeCard({ id, setEmployees, first, last, hireDate, active }) {
 
     const [isActive, setIsActive] = useState(true)
 
