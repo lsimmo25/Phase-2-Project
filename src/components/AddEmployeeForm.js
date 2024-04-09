@@ -6,7 +6,7 @@ function AddEmployeeForm({ setEmployees, employees }) {
         first: "",
         last: "",
         hireDate: "",
-        status: ""
+        active: true
     }
 
     const [newEmployee, setNewEmployee] = useState(defaultForm)
@@ -26,7 +26,7 @@ function AddEmployeeForm({ setEmployees, employees }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newEmployee)
+            body: JSON.stringify({...newEmployee, active: true})
         })
         .then(r => r.json())
         .then(addedEmployee => {

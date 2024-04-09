@@ -6,6 +6,7 @@ function AddCustomerForm({ setCustomers, customers }) {
         first: "",
         last: "",
         address: "",
+        status: true
     }
 
     const [newCustomer, setNewCustomer] = useState(defaultForm)
@@ -26,7 +27,7 @@ function AddCustomerForm({ setCustomers, customers }) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newCustomer)
+            body: JSON.stringify({...newCustomer, status: true})
         })
         .then(r => r.json())
         .then(addedCustomer => {
